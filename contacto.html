@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bienes Raices</title> <!--enlasar la hoga de estiño-->
+	<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> <!--tipo de letra-->
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css"><!--poner mi hoja de estilo al final-->
+</head>
+<body>
+		<header class="site-header inicio"> <!--Se utilizara cuando haya un encabezado-->
+		<div class="contenedor contenido-header">
+			<div class="barra">
+				<a href="/">
+					<img src="img/logo.svg" alt="Logotipo de Bienes Raices">
+				</a>
+				<div class="mobile-menu">
+					<a href="#navegacion">
+						<img src="img/barras.svg" alt="Icono menu">
+					</a>
+				</div>
+				<nav id="navegacion" class="navegacion"> <!--Cuando haya un navegacion-->
+					<a href="Nosotros.html">Nosotros</a>
+					<a href="Anuncios.html">Anuncios</a>
+					<a href="Blog.html">Blog</a>
+					<a href="contacto.html">Contactos</a>
+				</nav>
+			</div>
+			<h1>Venta de Casas y Departamentos Exclusivos del Lugar</h1>
+		</div>
+	</header>
+	<h1 class="fw-300 centrartxt">Contactanos</h1>
+	<img src="img/destacada3.jpg" alt="imagen Principal">
+	<main class="contenedor seccion contenido-centrado">
+		<h2 class="fw-300 centrartxt">Llena el Formulario de Contacto</h2>
+		<form action=""><!--Creacion de los formularios-->
+			<fieldset><!--va agrupando Elementos-->
+				<legend>Informacion Personal</legend>
+			<label>Nombre:</label><!--la etiqueta-->
+			<input type="text" placeholder="Tu nombre"><!--input es un campo de texto y solamente acepta texto, el placeholder es paraa ayudar al usuario para que ponga lo que va en el campo -->
+			<label>E-mail:</label>
+			<input type="email" placeholder="Tu Correo electronico" required><!--el required permite que el llenado de este campo sea necesario-->
+			<label for="Telefono">Telefono:</label>
+			<input type="tel" id="Telefono" placeholder="Tu Telefono">
+			<label>Mensaje:</label>
+			<textarea></textarea>
+			</fieldset>
+			<fieldset>
+				<legend>Informacion Propiedad</legend>
+			<label for="Opciones">Vende o Compra</label>
+			<select name="Opciones"><!--Cuadros de varias Opciones-->
+				<option value="" disabled selected>--Seleccione una Opcion</option>
+				<option value="">Comprar</option>
+				<option value="">Vender</option>
+			</select>
+			<label for="Cantidad">Cantidad</label>
+			<input type="number" min="1000" max="1000000" step="100">
+			</fieldset>
+			<fieldset>
+				<legend>contacto</legend>
+				<p>Como Desea ser Contactado:</p>
+				<div class="forma-contacto">
+				<label for="telefono">Telefono</label>
+				<input type="radio" name="contacto" value="telefono" id="telefono"><!--para que aparesca los ciculitos-->
+
+				<label for="correo">E-mail</label>
+				<input type="radio" name="contacto" value="correo" id="correo">
+				</div>
+				<p>Si eligio telefono, eliga la fecha y hora</p>
+				<!--Colocacion de fecha y hora-->
+				<label for="fecha">Fecha:</label>
+				<input type="date" id="fecha">
+				<label for="hora">Hora:</label>
+				<input type="time" id="hora" min="10:00" max="20:30">
+			</fieldset>
+			<input type="submit" value="Enviar" class="boton boton-verde">
+		</form>
+	</main>
+	<footer class="site-footer seccion"> <!-- es un pie de pagina o contenido, habitualmente tiene información sobre autores, copyright o enlaces a documentos relacionados-->
+		<div class="contenedor contenedor-footer">
+			<nav class="navegacion">
+				<a href="Nosotros.html">Nosotros</a>
+				<a href="Anuncios.html">Anuncios</a>
+				<a href="Blog.html">Blog</a>
+				<a href="contacto.html">Contactos</a>
+			</nav>
+			<p class="copyright">Todos los Derechos reservado 2020@</p>
+		</div>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,379 @@
+	html{
+		font-size: 62.5%;/**Reset para REMS - 62.5%= 10px de 16px*/
+	}
+	/**Cabio de fuentes*/
+	body {
+		font-family: 'Lato', sans-serif;
+		font-size: 1.6rem;
+		line-height: 2;
+	}
+	/**Globales que se reutiliza*/
+	img{
+		max-width: 100%;/**Permite que todas las imgenes sean responsibas*/
+	}
+	.contenedor {
+		width: 95%;
+		max-width: 120rem;/**1200px*/
+		margin: 0 auto;
+	}
+	/**Definicion de tamaño*/
+	h1{
+		font-size: 3.8rem;
+	}
+	h2{
+		font-size: 3.4rem;
+	}
+	h3{
+		font-size: 3rem;
+	}
+	h4{
+		font-size: 2.6rem;
+	}
+	/**utilidades*/
+	.seccion{
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+	}
+	.fw-300{
+		font-weight: 900;/**tamaño de letra*/
+	}
+	.centrartxt{
+		
+		text-align: center;/**centrar letra*/
+	}
+	.d-block{/**para que todos los botones tomen su espacio*/
+		display: block!important;/**sera el primero que lo tomen en cuenta*/
+	}
+	.contenido-centrado{
+		max-width: 900px;
+	}
+	/**Creacion de botones*/
+	
+	@media (min-width: 768px) {
+		.boton{
+			display: inline-block;
+			flex: 0 0 auto;
+		}
+	}
+	.boton:hover{
+		cursor: pointer;/**para que aparesca la manita en el boton*/
+	}
+	.boton-amarillo{
+		background-color: orange;
+	}
+	.boton-verde{
+		background-color: green;
+	}
+	/**Header*/
+	.site-header{
+		background-color: gray;
+		padding: 1rem 0 3rem 0;
+	}
+	.site-header.inicio {
+		background-image: url(../img/header.jpg);/** colocar la imagen*/
+		background-position: center center;/** centrara imagen*/
+		background-size: cover;
+		height: 100vh;
+		min-height: 60rem;/** los rem son pixeles*/
+	}
+	.contenido-header{
+		height: 100%;
+		display: flex;/**tiene direcciones y puede ser de izquierda a derecha*/
+		flex-direction: column;/**empieza de arriba hacia abajo*/
+		justify-content: space-between;
+		text-align: center;
+	}
+	@media (min-width: 768px) {
+		.contenido-header{
+			text-align: left;
+		}
+	}
+	.contenido-header h1{
+		color: white;
+		padding-bottom: 2rem;/**separacion de elemento de otro elemento*/
+		max-width: 60rem;
+		line-height: 2;/**Interliniado*/
+	}
+	.barra{
+		padding-top: 3rem;/**agrega una separacion*/
+	}
+	@media (min-width: 768px) {
+		.barra{
+			display: flex;
+			justify-content: space-between; /**alinacion*/
+			align-items: center;/**alinacion verticalmente*/
+
+		}
+	}
+	/**para la parte de navegacion*/
+	.navegacion a {
+		color: white;
+		text-decoration: none; /**eliminar la linia de avago*/
+		font-size: 1.8rem;/**formato de la letra*/
+		display: block;
+	}
+	@media (min-width: 768px) {
+		.navegacion a{
+			display: inline-block;
+			margin-right: 2rem;/**separacion para el siguiente elemento*/
+		}
+		.navegacion a:last-of-type {
+			margin: 0;
+		}
+	}
+	.navegacion a:hover{
+		color: #71B100;
+	}
+	/**mobile-menu*/
+	.mobile-menu img{
+		width: 5rem;
+	}
+	@media (min-width: 768px) {
+		.mobile-menu{
+			display: none;
+		}
+	}
+	.navegacion:target{
+		display: block;
+	}
+	.navegacion{
+		display: none;
+	}
+	@media (min-width: 768px) {
+		.navegacion{
+			display: block;
+		}
+	}
+	/**Acomodacion de los iconos nosotros*/
+	@media (min-width: 768px) {
+		.iconos-nosotros{
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+	.icono{
+		text-align: center;
+	}
+	@media (min-width: 768px) {
+		.icono{
+			flex-basis: calc(33.3% - 1rem);
+		}
+	}
+	.icono h3{
+		text-transform: uppercase;
+	}
+	/**Anuncios*/
+	@media (min-width: 768px){
+
+		.contenedor-anuncios{
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;/**para que posiciones las imagene para que el contenido sea mas grandes*/
+		}
+	}
+	.anuncios{
+		border-style: solid; /**para que aparesca la linea*/
+		border-color: white;/**el color de la linea*/
+		border-width: 1px;/**el ancho de la linea*/
+		background-color: #F5F5F5; /**Color de fondo*/
+		margin-bottom: 2rem;/**el espacio entre lineas*/
+	}
+	@media (min-width: 768px) {
+		.anuncios{
+			flex: 0 0 calc(33.3% - 1rem);
+		}
+	}
+	.contenido-anuncios{
+		padding: 2rem;/**el padding se utiliza para todos las direcciones*/
+	}
+	.contenido-anuncios h3, .contenido-anuncios p{
+		margin: 0;
+	}
+	.precio{
+		color: green;
+		font-weight: 700;/**para que se vea mas gruesos*/
+	}
+	.iconos-caracter{
+		list-style: none;
+		padding: 0;
+		display: flex;
+		justify-content: space-evenly;
+		flex: 1;
+		max-width: 500px;
+	}
+	.iconos-caracter li{
+		display: flex;
+	}
+	.iconos-caracter li img{
+		margin-right: 2rem;
+	}
+	.ver-todas {
+		display: flex;
+		justify-content: flex-end;
+	}
+	/**contacto principal*/
+	.imagen-contacto{
+		background-image: url(../img/encuentra.jpg);
+		background-position: center center;
+		background-size: cover;
+		height: 40rem;
+		display: flex;
+		align-items: center;
+	}
+	.contenido-contacto{
+		flex: 0 0 95%;/**factor de crecimiento*/
+		color: white;
+	}
+	.contenido-contacto p{
+		font-size: 1.8rem;
+	}
+	/**seccion inferior*/
+	@media (min-width: 768px) {
+		.seccion-inferior{
+			display: flex;
+			justify-content: space-between;
+		}
+		.seccion-inferio .blog{
+			flex-basis: 60%;
+		}
+		.seccion-inferio .testimoniales{
+			flex-basis: calc(40% - 2rem);
+		}
+	}
+	.estrada-blog{
+		margin-bottom: 2rem;
+	}
+	@media (min-width: 768px) {
+		.estrada-blog{
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+	.estrada-blog:las-of-type{
+		margin-bottom: 0;
+	}
+	@media (min-width: 768px) {
+		.estrada-blog .imgenes{
+			flex-basis: 50%;
+		}
+		.estrada-blog .texto-entrada{
+			flex-basis: calc(60% - 3rem);
+		}
+	}
+	.texto-entrada a{
+		color: black;
+		text-decoration: none;
+	}
+	.texto-entrada h4{
+		margin: 0;
+		line-height: 1.3;
+	}
+	.texto-entrada h4::after{/** after es un seudo elementos y no de puede seleccionar se escribe despues*/
+		content: '';
+		display: block;
+		width: 15rem;
+		height: 1rem;
+		background-color: green;
+		margin-top: .3rem;
+	}
+	.texto-entrada span{
+		color: orange;
+	}
+	/** testimoniales*/
+	.testimonial{
+		background-color: green;
+		font-size: 2rem;
+		padding: 2rem;
+		color: #ffffff;
+		border-top-right-radius: 15rem;/** redondear las puntas de un cuadrado*/
+		border-bottom-left-radius: 25rem; 
+	}
+	.testimonial p{
+		text-align: right;
+	}
+	.testimonial blockquote::before{/**before es un seudo elementos y no de puede seleccionar se escribe antes*/
+		content: '';
+		background-image: url(../img/comilla.svg);
+		width: 4rem;
+		height: 4rem;
+		display: block;
+		position: absolute;
+		left: -20px;
+	}
+	.testimonial blockquote{
+		position: relative;
+		padding-left: 5rem;
+		font-weight: 300;
+	}
+	/**footer*/
+	.site-footer{
+		background-color: gray;
+		margin: 0;
+	}
+	.contenedor-footer{
+		padding: 3rem 0;
+		text-align: center;
+	}
+	@media (min-width: 768px) {
+		.contenedor-footer{
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+	.copyright{
+		margin: 0;
+		color: white;
+	}
+	/**paginas internas*/
+	@media (min-width: 768px){
+		.contenido-nosotros{
+			display: grid;
+			grid-template-columns: 50% 50%;/**para que te divida la pantallas*/
+			grid-column-gap: 2rem;
+		}
+	}
+	.texto-nosotros blockquote{
+		font-weight: 900;
+		font-size: 2rem;
+		margin: 0;
+		padding: 3rem 0;
+	}
+	/**Anuncios*/
+	.resumen-propiedad{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	/**Contacos*/
+	label{
+		display: block;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+	legend{
+		font-size: 3rem;
+		color: #333333;
+	}
+	input:not([type="submit"]), textarea, select{
+		padding: 1rem;
+		display: block;
+		width: 98%;
+		background-color: #e1e1e1;
+		margin-bottom: 2rem;
+		border: none ;
+		border-radius: 1rem;
+	}
+	input:[type="radio"]{
+		width: auto;
+		margin: 0; 
+	}
+
+	textarea{
+		height: 20rem;
+	}
+	.forma-contacto{
+		max-width: 30rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
